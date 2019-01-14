@@ -1,0 +1,16 @@
+.container-flex {
+    margin: 20px;
+}
+
+.center {
+    text-align: center;
+    justify-content: center;
+}
+
+.bold {
+    font-weight: bold
+}
+
+.margin {
+    margin: 20px;
+}

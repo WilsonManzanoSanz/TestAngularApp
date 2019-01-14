@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="flex flex-graph" style=" flex-wrap: wrap">
+        <div class="graph">
+            <canvas baseChart class="graph" width="200" height="auto" [datasets]="crimeChartData" [labels]="crimeChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked(crimeChartData, crimeChartLabels)"></canvas>
+        </div>
+        <div class="graph">
+            <canvas baseChart width="200" height="auto" [datasets]="malwareChartData" [labels]="malwareChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked(malwareChartData, malwareChartLabels)"></canvas>
+        </div>
+        <div class="graph">
+            <canvas baseChart width="200" height="auto" [datasets]="credentialsChartData" [labels]="credentialChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked(credentialsChartData, credentialChartLabels)"></canvas>
+        </div>
+        <div class="graph">
+            <canvas baseChart width="200" height="auto" [datasets]="cardsChartData" [labels]="cardsChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked(cardsChartData, cardsChartLabels)"></canvas>
+        </div>
+        <div class="graph">
+            <canvas baseChart width="200" height="auto" [datasets]="botsChartData" [labels]="botsChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked(botsChartData, botsChartLabels)"></canvas>
+        </div>
+    </div>
+    <div class="main-graph">
+        <canvas baseChart width="600" height="auto" [datasets]="mainChartData" [labels]="mainChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"></canvas>
+    </div>
+</div>

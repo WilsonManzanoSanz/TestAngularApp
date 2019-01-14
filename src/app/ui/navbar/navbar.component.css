@@ -1,0 +1,32 @@
+.header-nav {
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.tab {
+    padding: 10px;
+    display: inline-block;
+}
+
+.active-link {
+    color: rgb(0, 189, 255);
+    border: none;
+    border-bottom: 1px solid rgb(0, 189, 255);
+}
+
+@media only screen and (max-width: 700px) {
+    .spacer {
+        display: none;
+    }
+    .tab {
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    span {
+        text-align: center;
+    }
+}
