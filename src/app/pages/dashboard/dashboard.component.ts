@@ -55,13 +55,13 @@ export class DashboardComponent implements OnInit {
   constructor(private dashboardService:DashboardService) { }
 
   ngOnInit() {
-    this.initializeMainChart();
     this.getBotsChart();
     this.getCredentialsChart();
     this.getCrimesChart();
     this.getMalwaresChart();
     this.getCredentialsChart();
     this.getCardsChart();
+    this.initializeMainChart();
   }
 
   getBotsChart(){
@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
       this.botsChartLabels[idx] = value.attributes.date;
       return value.attributes.count;
     });
-    this.botsChartData[0].label = `Boots${this.botsChartData[0].data.length}`;
+    this.botsChartData[0].label = `Boots ${this.botsChartData[0].data.length}`;
   }
 
   getCredentialsChart(){
@@ -77,7 +77,7 @@ export class DashboardComponent implements OnInit {
       this.credentialChartLabels[idx] = value.attributes.date;
       return value.attributes.count;
     });
-    this.credentialsChartData[0].label = `Credentials${this.credentialsChartData[0].data.length}`;
+    this.credentialsChartData[0].label = `Credentials ${this.credentialsChartData[0].data.length}`;
   }
 
   getMalwaresChart(){
@@ -85,7 +85,7 @@ export class DashboardComponent implements OnInit {
       this.malwareChartLabels[idx] = value.attributes.date;
       return value.attributes.count;
     });
-    this.malwareChartData[0].label = `Malware${this.malwareChartData[0].data.length}`;
+    this.malwareChartData[0].label = `Malware ${this.malwareChartData[0].data.length}`;
   }
 
   getCardsChart(){
@@ -93,7 +93,7 @@ export class DashboardComponent implements OnInit {
       this.cardsChartLabels[idx] = value.attributes.date;
       return value.attributes.count;
     });
-    this.cardsChartData[0].label = `Cards${this.cardsChartData[0].data.length}`;
+    this.cardsChartData[0].label = `Cards ${this.cardsChartData[0].data.length}`;
   }
   
   getCrimesChart(){
@@ -101,7 +101,7 @@ export class DashboardComponent implements OnInit {
       this.crimeChartLabels[idx] = value.attributes.date;
       return value.attributes.count;
     });
-    this.crimeChartData[0].label = `Crime${this.crimeChartData[0].data.length}`;
+    this.crimeChartData[0].label = `Crime ${this.crimeChartData[0].data.length}`;
   }
 
   initializeMainChart(){
@@ -109,7 +109,7 @@ export class DashboardComponent implements OnInit {
       this.mainChartLabels[idx] = value.attributes.date;
       return value.attributes.count;
     });
-    this.mainChartData[0].label = `Bots${this.botsChartData[0].data.length}`;
+    this.mainChartData[0].label = `Bots ${this.botsChartData[0].data.length}`;
   }
  
   // events

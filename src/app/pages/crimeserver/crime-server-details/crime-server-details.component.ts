@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import  ProgressBar  from 'progressbar.js';
 import {ActivatedRoute} from '@angular/router';
 import {CrimeserverService} from '../../../services/crimeserver/crimeserver.service';
+declare var go: any;
 
 @Component({
   selector: 'app-crime-server-details',

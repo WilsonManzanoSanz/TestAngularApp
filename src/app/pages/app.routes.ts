@@ -8,6 +8,7 @@ const APP_ROUTE: Routes = [
     { path: 'dashboard', component:  DashboardComponent},
     { path: 'crimeserver', component: CrimeserverComponent},
     { path: 'crimeserver/:id', component: CrimeServerDetailsComponent},
+    { path: 'blueliv', loadChildren: '../blueliv/blueliv.module#BluelivModule'},
     {path: '**', pathMatch: 'full', redirectTo: 'dashboard' }
 ]
 

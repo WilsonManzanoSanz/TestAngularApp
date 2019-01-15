@@ -188,6 +188,11 @@ button.raised {
     justify-content: center;
 }
 
+.card-flex {
+    width: 40%;
+    height: auto;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -209,11 +214,14 @@ button.raised {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .card-flex {
+        width: 90%;
+    }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 900px) {
-    .card-series {
-        width: 80%;
+    .card-flex {
+        width: 90%;
     }
     .flex-container {
         flex-wrap: wrap;
