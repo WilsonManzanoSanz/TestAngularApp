@@ -21,7 +21,6 @@ export class DashboardService {
   }
 
   getBoots(){
-    console.log(this.boots);
     return this.boots;
   }
 

@@ -114,8 +114,6 @@ export class DashboardComponent implements OnInit {
  
   // events
   public chartClicked(chartData:any, labels):void {
-    console.log(chartData);
-    console.log(labels);
     this.mainChartLabels = labels;
     this.mainChartData = chartData;
     this.mainChartData[0].label = `${chartData[0].label}`;

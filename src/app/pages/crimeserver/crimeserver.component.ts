@@ -22,7 +22,6 @@ export class CrimeserverComponent implements OnInit {
       response => this.crimes = response.data,
       error => console.error(error)
     );
-    console.log(this.crimes); 
   }
 
 }
