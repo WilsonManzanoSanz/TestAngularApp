@@ -14,6 +14,11 @@ import { APP_ROUTING } from './pages/app.routes';
 // Chart
 import { ChartsModule } from 'ng2-charts';
 
+// Http
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './intercerptor/token.interceptor';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,9 +31,12 @@ import { ChartsModule } from 'ng2-charts';
   imports: [
     BrowserModule,
     APP_ROUTING,
+    HttpClientModule,
     ChartsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+      ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BluelivService } from '../../services/blueliv.service';
 
 @Component({
   selector: 'app-blueliv',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BluelivComponent implements OnInit {
 
-  constructor() { }
+  constructor( private bluelivService:BluelivService) { }
 
   ngOnInit() {
+    this.getSparksByTAG();
+  }
+
+  getSparksByTAG(){
+    this.bluelivService.getSparksByTAG('BOTNET',10).subscribe(
+      response => console.log(response),
+      error => console.error(error),
+    );
   }
 
 }
